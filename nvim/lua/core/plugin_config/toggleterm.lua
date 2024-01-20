@@ -3,5 +3,6 @@ require("toggleterm").setup{
 }
 
 -- Toggle Terminal showing/hiding
-vim.keymap.set('n', '<C-j>', ':ToggleTerm<CR>')
-vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
+vim.keymap.set('n', '<C-j>', ':ToggleTerm<CR>i')
+-- vim.keymap.set('t', '<C-j>', ':ToggleTerm<CR>')
+vim.keymap.set('t', '<C-j>', [[<C-\><C-n>:ToggleTerm<CR>]])
