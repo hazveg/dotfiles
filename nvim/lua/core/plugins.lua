@@ -17,7 +17,6 @@ return require('packer').startup(function(use)
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
   use { "catppuccin/nvim", as = "catppuccin" }
-  -- use 'm4xshen/autoclose.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
@@ -29,16 +28,12 @@ return require('packer').startup(function(use)
   use 'rafamadriz/friendly-snippets'
   use 'folke/trouble.nvim'
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
-  -- indentation
--- use {
---	"lukas-reineke/indent-blankline.nvim",
---	config = function()
---		require("ibl").setup(require("indent-rainbowline").make_opts({}))
---	end,
---	requires = {
---		"TheGLander/indent-rainbowline.nvim",
---	}
--- }
+
+  -- telescope
+  use {
+	  'nvim-telescope/telescope.nvim', tag = '0.1.5',
+	  requires = { { 'nvim-lua/plenary.nvim' } }
+  }
 
   -- Terminal
   use 'akinsho/toggleterm.nvim'
