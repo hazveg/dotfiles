@@ -24,6 +24,9 @@ then
 		rm -r ~/.local/share/konsole
 	fi
 
+	echo "Creating symlink for ~.config/zathura"
+	ln -s ~/.dotfiles/zathura ~/.config/zathura
+
 	echo "Creating symlink for ~/.local/share/konsole"
 	ln -s ~/.dotfiles/konsole ~/.local/share/konsole
 
