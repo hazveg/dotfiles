@@ -27,6 +27,9 @@ then
 	echo "Creating symlink for ~.config/zathura"
 	ln -s ~/.dotfiles/zathura ~/.config/zathura
 
+	echo "Creating symlink for ~.config/qimgv"
+	ln -s ~/.dotfiles/qimgv ~/.config/qimgv
+
 	echo "Creating symlink for ~/.local/share/konsole"
 	ln -s ~/.dotfiles/konsole ~/.local/share/konsole
 
