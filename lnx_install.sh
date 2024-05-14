@@ -24,10 +24,14 @@ then
 		echo "[7] ~/.tmux.conf"
 		echo "[8] Firefox Settings"
 
-		read selection
-		to_remove+=($selection)
+		read -p "[ ${to_remove[*]} ] > " input
 
-		echo ${to_remove[*]}
+		if [ "$input" = "commit" ]
+		then
+			break
+		fi
+
+		to_remove+=($input)
 	done
 fi
 
