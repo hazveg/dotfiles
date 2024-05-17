@@ -40,39 +40,58 @@ read confirmation
 
 if [ "$confirmation" = "y" ] || [ "$confirmation" = "Y" ]
 then
-	echo "Deleting .bashrc"
-	rm ~/.bashrc
-	echo "Creating symlink for ~/.bashrc"
-	ln -s ~/.dotfiles/.bashrc ~/.bashrc
-
-	echo "Creating symlink for ~/.gitconfig"
-	ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-
-	echo "Creating symlink for ~/.config/nvim"
-	ln -s ~/.dotfiles/nvim ~/.config/nvim
-
-	echo "Checking whether konsole dir exists already"
-	if [ -d ~/.local/share/konsole ]; then
-		echo "~/.local/share/konsole exists, deleting now"
-		rm -r ~/.local/share/konsole
+	if ! [ $(printf '%s\0' "${to_remove[@]}" | grep -Fxqz -- '1') ]; then
+		echo "Deleting .bashrc"
+		rm ~/.bashrc
+		echo "Creating symlink for ~/.bashrc"
+		ln -s ~/.dotfiles/.bashrc ~/.bashrc
 	fi
-	echo "Creating symlink for ~/.local/share/konsole"
-	ln -s ~/.dotfiles/konsole ~/.local/share/konsole
 
-	echo "Creating symlink for ~.config/zathura"
-	ln -s ~/.dotfiles/zathura ~/.config/zathura
+	if ! [ $(printf '%s\0' "${to_remove[@]}" | grep -Fxqz -- '2') ]; then
+		echo "Creating symlink for ~/.gitconfig"
+		ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+	fi
 
-	echo "Creating symlink for ~.config/qimgv"
-	ln -s ~/.dotfiles/qimgv ~/.config/qimgv
+	if ! [ $(printf '%s\0' "${to_remove[@]}" | grep -Fxqz -- '3') ]; then
+		echo "Creating symlink for ~/.config/nvim"
+		ln -s ~/.dotfiles/nvim ~/.config/nvim
+	fi
 
-	echo "Creating symlink for ~/.tmux.conf"
-	ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+	if ! [ $(printf '%s\0' "${to_remove[@]}" | grep -Fxqz -- '4') ]; then
+		echo "Checking whether konsole dir exists already"
+		if [ -d ~/.local/share/konsole ]; then
+			echo "~/.local/share/konsole exists, deleting now"
+			rm -r ~/.local/share/konsole
+		fi
+		echo "Creating symlink for ~/.local/share/konsole"
+		ln -s ~/.dotfiles/konsole ~/.local/share/konsole
+	fi
+	
+	echo "Creating symlink for ~/.config/alacritty"
+	ln -s ~/.dotfiles/alacritty ~/.config/alacritty
 
-	echo "Copying user.js to ~/user.js"
-	cp ~/.dotfiles/user.js ~/user.js
+	if ! [ $(printf '%s\0' "${to_remove[@]}" | grep -Fxqz -- '5') ]; then
+		echo "Creating symlink for ~.config/zathura"
+		ln -s ~/.dotfiles/zathura ~/.config/zathura
+	fi
 
-	echo "Copying stylus.json to ~/stylus.json"
-	cp ~/.dotfiles/stylus.json ~/stylus.json
+	if ! [ $(printf '%s\0' "${to_remove[@]}" | grep -Fxqz -- '6') ]; then
+		echo "Creating symlink for ~.config/qimgv"
+		ln -s ~/.dotfiles/qimgv ~/.config/qimgv
+	fi
+
+	if ! [ $(printf '%s\0' "${to_remove[@]}" | grep -Fxqz -- '7') ]; then
+		echo "Creating symlink for ~/.tmux.conf"
+		ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+	fi
+	
+	if ! [ $(printf '%s\0' "${to_remove[@]}" | grep -Fxqz -- '8') ]; then
+		echo "Copying user.js to ~/user.js"
+		cp ~/.dotfiles/user.js ~/user.js
+
+		echo "Copying stylus.json to ~/stylus.json"
+		cp ~/.dotfiles/stylus.json ~/stylus.json
+	fi
 else
 	echo "Installation cancelled by user"
 fi
