@@ -35,8 +35,8 @@ return require('packer').startup(function(use)
 	  requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  -- Terminal
-  use 'akinsho/toggleterm.nvim'
+  -- Terminal, really janky to work properly, just use tmux.
+  -- use 'akinsho/toggleterm.nvim'
 
   use {
 	  "williamboman/mason.nvim",
