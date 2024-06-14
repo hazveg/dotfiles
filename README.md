@@ -2,6 +2,8 @@
 
 This repository contains an assortment of all my dotfiles.
 
+NOTE: **DON'T USE STOW FOR 'kde-keyboard-shortcuts', KDE DOESN'T LIKE SYMLINKS**
+
 # Installation Guide
 
 ## Linux
