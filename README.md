@@ -32,6 +32,19 @@ $Env:USERPROFILE\.dotfiles\install.ps1
 
 # Misc.
 
+## tmux
+
+Before usage clone TPM:
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+Also make sure to add the following to **~/.bash_aliases**:
+```bash
+alias tmux='tmux -u'
+```
+
+That last one is a bit of a necessity lest you wanna be hit with Unicode bruh moments.
+
 ## Nvim Config
 
 ### Clipboard
