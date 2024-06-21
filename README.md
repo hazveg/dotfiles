@@ -2,21 +2,28 @@
 
 This repository contains an assortment of all my dotfiles.
 
-NOTE: **DON'T USE STOW FOR 'kde-keyboard-shortcuts', KDE DOESN'T LIKE SYMLINKS**
-
 # Installation Guide
 
 ## Linux
 
 1. Clone repo into new hidden directory.
-```
+```bash
 git clone https://github.com/hazveg/dotfiles ~/.dotfiles
 ```
 
-2. Run the installation script
+2. Use GNU stow for singular components
+```bash
+stow alacritty
+stow bashrc
+stow gitconfig
+stow konsole
+stow nvim
+stow qimgv
+stow tmux
+stow zathura
 ```
-~/.dotfiles/install.sh
-```
+NOTE: DON'T USE STOW FOR 'kde-keyboard-shortcuts', **KDE DOESN'T LIKE SYMLINKS**
+NOTE2: lnx_install.sh is deprecated, don't use it.
 
 ## Windows
 1. Clone repo into new directory
