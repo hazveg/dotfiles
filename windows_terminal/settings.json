@@ -50,7 +50,7 @@
             "font": 
             {
                 "face": "JetBrainsMono Nerd Font",
-                "size": 9.0,
+                "size": 13.0,
                 "weight": "normal"
             },
             "opacity": 90
@@ -352,6 +352,7 @@
             "tab": 
             {
                 "background": "#1E1E2EFF",
+                "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
@@ -363,6 +364,9 @@
             "window": 
             {
                 "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
                 "useMica": false
             }
         }
