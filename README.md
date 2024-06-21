@@ -10,7 +10,7 @@ NOTE: **DON'T USE STOW FOR 'kde-keyboard-shortcuts', KDE DOESN'T LIKE SYMLINKS**
 
 1. Clone repo into new hidden directory.
 ```
-git clone https://github.com/hazveg/hazveg_dotfiles ~/.dotfiles
+git clone https://github.com/hazveg/dotfiles ~/.dotfiles
 ```
 
 2. Run the installation script
@@ -19,16 +19,15 @@ git clone https://github.com/hazveg/hazveg_dotfiles ~/.dotfiles
 ```
 
 ## Windows
-
-1. Clone repo into new hidden directory.
+1. Clone repo into new directory
+```powershell
+git clone https://github.com/hazveg/dotfiles $Env:USERPROFILE\.dotfiles
 ```
-git clone https://github.com/hazveg/hazveg_dotfiles $Env:USERPROFILE\.dotfiles
+2. Switch to windows branch
+```powershell
+git switch win
 ```
-
-2. Run the installation script **AS ADMINISTRATOR!**
-```
-$Env:USERPROFILE\.dotfiles\install.ps1
-```
+3. Follow the instructions there.
 
 # Misc.
 
@@ -50,7 +49,6 @@ That last one is a bit of a necessity lest you wanna be hit with Unicode bruh mo
 ### Clipboard
 
 This config uses the system clipboard.
-
 On linux, this requires a clipboard tool for the respective display server.
 
 #### X11
