@@ -53,20 +53,12 @@ That last one is a bit of a necessity lest you wanna be hit with Unicode bruh mo
 
 ## Nvim Config
 
-### Clipboard
+### Requirements[^1]
+- Clipboard
+  - X11: xclip
+  - Wayland: wl-clipboard
+- Telescope
+  - ripgrep
+  - fd-find
 
-This config uses the system clipboard.
-On linux, this requires a clipboard tool for the respective display server.
-
-#### X11
-```
-sudo apt install xsel
-```
-```
-sudo apt install xclip
-```
-
-#### Wayland
-```
-sudo apt install wl-clipboard
-```
+[^1]: Debian package names
