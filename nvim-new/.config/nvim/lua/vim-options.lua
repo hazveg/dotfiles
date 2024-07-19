@@ -17,4 +17,4 @@ vim.keymap.set('n', '<C-W>v', '<C-W>s', {})
 vim.keymap.set('n', '<C-W>b', '<C-W>v', {})
 
 vim.g.mapleader = " "
-
+vim.opt.clipboard = 'unnamedplus'
