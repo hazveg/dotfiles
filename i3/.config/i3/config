@@ -49,7 +49,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym Ctrl+$mod+t exec i3-sensible-terminal
+bindsym Ctrl+$mod+t exec alacritty # i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+F4 kill
@@ -178,9 +178,13 @@ default_border pixel 1
 default_floating_border pixel 0
 gaps inner 5
 
-exec --no-startup-id $HOME/.dwm-startup.sh
+# exec --no-startup-id $HOME/.dwm-startup.sh
+exec --no-startup-id /usr/lib/pam_kwallet_init
+exec --no-startup-id "xrandr --output eDP-1 --mode 1920x1080 --rate 60 --output HDMI-1-0 --mode 1920x1080 --rate 60 --right-of eDP-1 --primary"
+exec --no-startup-id "feh --bg-fill --no-fehbg $(ls /home/aaron/Pictures/mountain_wallpapers/* | shuf -n1) $(ls /home/aaron/Pictures/nothing_to_see_here/* | shuf -n1)"
+exec --no-startup-id picom
 
-bindsym Mod4+e exec "QT_QPA_PLATFORMTHEME=qt5ct dolphin"
+bindsym Mod4+e exec dolphin
 bindsym Ctrl+Shift+Esc exec plasma-systemmonitor
 bindsym Mod4+l exec "sleep 0.1 && slock"
 bindsym Print exec "maim -s | xclip -selection clipboard -t image/png"

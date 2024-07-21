@@ -13,8 +13,8 @@ vim.keymap.set('n', '<C-j>', '<C-W>j', {})
 vim.keymap.set('n', '<C-k>', '<C-W>k', {})
 vim.keymap.set('n', '<C-l>', '<C-W>l', {})
 
-vim.keymap.set('n', '<C-W>v', '<C-W>s', {})
-vim.keymap.set('n', '<C-W>b', '<C-W>v', {})
+vim.keymap.set('n', '<C-W>b', '<C-W>s', {})
+vim.keymap.set('n', '<C-W>v', '<C-W>v', {})
 
 vim.g.mapleader = " "
 vim.opt.clipboard = 'unnamedplus'
