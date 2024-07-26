@@ -183,8 +183,10 @@ exec --no-startup-id /usr/lib/pam_kwallet_init
 exec --no-startup-id "xrandr --output eDP-1 --mode 1920x1080 --rate 60 --output HDMI-1-0 --mode 1920x1080 --rate 60 --right-of eDP-1 --primary"
 exec --no-startup-id "feh --bg-fill --no-fehbg $(ls /home/aaron/Pictures/mountain_wallpapers/* | shuf -n1) $(ls /home/aaron/Pictures/nothing_to_see_here/* | shuf -n1)"
 exec --no-startup-id picom
+exec --no-startup-id "xrdb /home/aaron/.Xresources"
+exec --no-startup-id dunst
 
-bindsym Mod4+e exec dolphin
+bindsym Mod4+e exec --no-startup-id thunar
 bindsym Ctrl+Shift+Esc exec plasma-systemmonitor
 bindsym Mod4+l exec "sleep 0.1 && slock"
 bindsym Print exec "maim -s | xclip -selection clipboard -t image/png"
