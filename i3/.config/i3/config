@@ -191,6 +191,14 @@ bindsym Ctrl+Shift+Esc exec plasma-systemmonitor
 bindsym Mod4+l exec "sleep 0.1 && slock"
 bindsym Print exec "maim -s | xclip -selection clipboard -t image/png"
 
+# target					title	bg		text	indicator	border
+client.focused				#89b4fa #1e1e2e #cdd6f4 #f5e0dc		#89b4fa
+client.focused_inactive		#6c7086 #1e1e2e #cdd6f4 #f5e0dc		#6c7086
+client.unfocused			#6c7086 #1e1e2e #cdd6f4 #f5e0dc		#6c7086
+client.urgent				#fab387 #1e1e2e #fab387 #6c7086		#fab387
+client.placeholder			#6c7086 #1e1e2e #cdd6f4 #6c7086		#6c7086
+client.background			#1e1e2e
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
